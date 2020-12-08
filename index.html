@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddham script unicode summary</title>
+<style>
+@import url(https://victorlee.github.io/fonts/stylesheet.css);
+h1, h2, h3, p {
+    font-family: arial;
+}
+a {
+color: #00F;
+}
+@media (min-width: 1300px) {
+.table {
+  width: 75%;
+  float: left;
+}
+.side {
+  text-align: left;
+  width: 24%;
+  float: left;
+}
+}
+@media (max-width: 1299px) {
+.table {
+overflow-x:auto;
+}
+.side {
+  max-width: 30rem;
+  margin: auto;
+}
+}
+::selection {
+color: #F00;
+background: rgba(1,1,1,0.2);
+}
+table {
+    border-collapse: collapse;
+}
+table td, table th {
+    border: 1px solid #AAA;
+    text-align: center;
+    cursor: pointer;
+}
+.siddham {
+font-size: 50px;
+font-family: 'Noto Sans Siddham';
+}
+.unicode {
+    font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+.siddham > td {
+    position: relative;
+    padding-bottom: 0px;
+}
+.siddham > td:hover:after {
+    position: absolute;
+    content: attr(alt);
+    padding: 8px;
+    border: 1px solid #000;
+    font-size: 15px;
+    font-family: Arial;
+    color: #000;
+    top: -60px;
+    left: 0px;
+    background: #EEE;
+    max-height: 40px;
+    overflow: auto;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.siddham > td:hover {
+    background: rgba(150,150,150,0.3);
+}
+.unicode > td:hover {
+    color: #00F;
+    background: rgba(0,200,200,0.3);
+}
+.sidetabdiv {
+    max-height: 240px;
+    overflow-y:auto;
+    border: 1px solid;
+}
+#output {
+    font-size: 40px;
+    width: 100%;
+    font-family: Noto Sans Siddham
+}
+.indvow {background-color: rgba(250, 0, 0, 0.1)}
+.con {background-color: rgba(0, 250, 0, 0.1)}
+.vowelsign {background-color: rgba(0, 0, 250, 0.1)}
+.varsign {background-color: rgba(250, 250, 0, 0.15)}
+.headmark {background-color: rgba(250, 0, 250, 0.15)}
+.punct {background-color: rgba(0, 250, 250, 0.15)}
+.side > p {
+padding: 1px 5px;
+}
+</style>
+</head>
+<body>
+<div align="center" valign="middle">
+<h1>Siddham script unicode summary</h1>
+<p>Click a character to type into the textbox, click its unicode below for detailed stats.<br>Any text you click inside the table are automatically copied to your clipboard.<br>
+    more info: <a href="https://www.unicode.org/charts/PDF/U11580.pdf" target="_blank">https://www.unicode.org/charts/PDF/U11580.pdf</a><br>
+    by <a href="http://github.com/victorlee/" target="_blank">Victor Lee</a>
+</p>
+<hr>
+<div class="table">
+<table>
+<thead>
+<tr class="siddham">
+<td alt="A" class="indvow">𑖀</td>
+<td alt="Ā" class="indvow">𑖁</td>
+<td alt="I" class="indvow">𑖂</td>
+<td alt="Ī" class="indvow">𑖃</td>
+<td alt="U" class="indvow">𑖄</td>
+<td alt="Ū" class="indvow">𑖅</td>
+<td alt="Ṛ" class="indvow">𑖆</td>
+<td alt="Ṝ" class="indvow">𑖇</td>
+<td alt="Ḷ" class="indvow">𑖈</td>
+<td alt="Ḹ" class="indvow">𑖉</td>
+<td alt="E" class="indvow">𑖊</td>
+<td alt="AI" class="indvow">𑖋</td>
+<td alt="O" class="indvow">𑖌</td>
+<td alt="AU" class="indvow">𑖍</td>
+<td alt="K" class="con">𑖎</td>
+<td alt="KH" class="con">𑖟</td>
+</tr>
+<tr class="unicode">
+<td>U+11580</td>
+<td>U+11581</td>
+<td>U+11582</td>
+<td>U+11583</td>
+<td>U+11584</td>
+<td>U+11585</td>
+<td>U+11586</td>
+<td>U+11587</td>
+<td>U+11588</td>
+<td>U+11589</td>
+<td>U+1158A</td>
+<td>U+1158B</td>
+<td>U+1158C</td>
+<td>U+1158D</td>
+<td>U+1158E</td>
+<td>U+1158F</td>
+</tr>
+<tr class="siddham">
+<td alt="G" class="con">𑖐</td>
+<td alt="GH" class="con">𑖑</td>
+<td alt="Ṅ" class="con">𑖒</td>
+<td alt="C" class="con">𑖓</td>
+<td alt="CH" class="con">𑖔</td>
+<td alt="J" class="con">𑖕</td>
+<td alt="JH" class="con">𑖖</td>
+<td alt="Ñ" class="con">𑖗</td>
+<td alt="Ṭ" class="con">𑖘</td>
+<td alt="ṬH" class="con">𑖙</td>
+<td alt="Ḍ" class="con">𑖚</td>
+<td alt="ḌH" class="con">𑖛</td>
+<td alt="Ṇ" class="con">𑖜</td>
+<td alt="T" class="con">𑖝</td>
+<td alt="TH" class="con">𑖞</td>
+<td alt="D" class="con">𑖟</td>
+</tr>
+<tr class="unicode">
+<td>U+11590</td>
+<td>U+11591</td>
+<td>U+11592</td>
+<td>U+11593</td>
+<td>U+11594</td>
+<td>U+11595</td>
+<td>U+11596</td>
+<td>U+11597</td>
+<td>U+11598</td>
+<td>U+11599</td>
+<td>U+1159A</td>
+<td>U+1159B</td>
+<td>U+1159C</td>
+<td>U+1159D</td>
+<td>U+1159E</td>
+<td>U+1159F</td>
+</tr>
+<tr class="siddham">
+<td alt="DH" class="con">𑖠</td>
+<td alt="N" class="con">𑖡</td>
+<td alt="P" class="con">𑖢</td>
+<td alt="PH" class="con">𑖣</td>
+<td alt="B" class="con">𑖤</td>
+<td alt="BH" class="con">𑖥</td>
+<td alt="M" class="con">𑖦</td>
+<td alt="Y" class="con">𑖧</td>
+<td alt="R" class="con">𑖨</td>
+<td alt="L" class="con">𑖩</td>
+<td alt="V" class="con">𑖪</td>
+<td alt="Ṣ" class="con">𑖫</td>
+<td alt="Ś" class="con">𑖬</td>
+<td alt="S" class="con">𑖭</td>
+<td alt="H" class="con">𑖮</td>
+<td alt="Ā" class="vowelsign">𑖯</td>
+</tr>
+<tr class="unicode">
+<td>U+115A0</td>
+<td>U+115A1</td>
+<td>U+115A2</td>
+<td>U+115A3</td>
+<td>U+115A4</td>
+<td>U+115A5</td>
+<td>U+115A6</td>
+<td>U+115A7</td>
+<td>U+115A8</td>
+<td>U+115A9</td>
+<td>U+115AA</td>
+<td>U+115AB</td>
+<td>U+115AC</td>
+<td>U+115AD</td>
+<td>U+115AE</td>
+<td>U+115AF</td>
+</tr>
+<tr class="siddham">
+<td alt="I" class="vowelsign">𑖰</td>
+<td alt="Ī" class="vowelsign">𑖱</td>
+<td alt="U" class="vowelsign">𑖲</td>
+<td alt="Ū" class="vowelsign">𑖳</td>
+<td alt="R" class="vowelsign">𑖴</td>
+<td alt="Ṝ" class="vowelsign">𑖵</td>
+<td alt="reserved" class="vowelsign">𑖶</td>
+<td alt="reserved" class="vowelsign">𑖷</td>
+<td alt="E" class="vowelsign">𑖸</td>
+<td alt="AI" class="vowelsign">𑖹</td>
+<td alt="O" class="vowelsign">𑖺</td>
+<td alt="AU" class="vowelsign">𑖻</td>
+<td alt="Candrabindu" class="varsign">𑖼</td>
+<td alt="Ṃ Anusvara" class="varsign">𑖽</td>
+<td alt="Ḥ Visagara" class="varsign">𑖾</td>
+<td alt="Virama" class="varsign">𑖿</td>
+</tr>
+<tr class="unicode">
+<td>U+115B0</td>
+<td>U+115B1</td>
+<td>U+115B2</td>
+<td>U+115B3</td>
+<td>U+115B4</td>
+<td>U+115B5</td>
+<td>U+115B6</td>
+<td>U+115B7</td>
+<td>U+115B8</td>
+<td>U+115B9</td>
+<td>U+115BA</td>
+<td>U+115BB</td>
+<td>U+115BC</td>
+<td>U+115BD</td>
+<td>U+115BE</td>
+<td>U+115BF</td>
+</tr>
+<tr class="siddham">
+<td alt="Nukta" class="varsign">𑗀</td>
+<td alt="Siddham" class="headmark">𑗁</td>
+<td alt="Danda" class="punct">𑗂</td>
+<td alt="Double Danda" class="punct">𑗃</td>
+<td alt="Separator Dot" class="punct">𑗄</td>
+<td alt="Separator Bar" class="punct">𑗅</td>
+<td>𑗆</td>
+<td>𑗇</td>
+<td>𑗈</td>
+<td>𑗉</td>
+<td>𑗊</td>
+<td>𑗋</td>
+<td>𑗌</td>
+<td>𑗍</td>
+<td>𑗎</td>
+<td>𑗏</td>
+</tr>
+<tr class="unicode">
+<td>U+115C0</td>
+<td>U+115C1</td>
+<td>U+115C2</td>
+<td>U+115C3</td>
+<td>U+115C4</td>
+<td>U+115C5</td>
+<td>U+115C6</td>
+<td>U+115C7</td>
+<td>U+115C8</td>
+<td>U+115C9</td>
+<td>U+115CA</td>
+<td>U+115CB</td>
+<td>U+115CC</td>
+<td>U+115CD</td>
+<td>U+115CE</td>
+<td>U+115CF</td>
+</tr>
+<tr class="siddham">
+<td>𑗐</td>
+<td>𑗑</td>
+<td>𑗒</td>
+<td>𑗓</td>
+<td>𑗔</td>
+<td>𑗕</td>
+<td>𑗖</td>
+<td>𑗗</td>
+<td>𑗘</td>
+<td>𑗙</td>
+<td>𑗚</td>
+<td>𑗛</td>
+<td>𑗜</td>
+<td>𑗝</td>
+</tr>
+<tr class="unicode">
+<td>U+115D0</td>
+<td>U+115D1</td>
+<td>U+115D2</td>
+<td>U+115D3</td>
+<td>U+115D4</td>
+<td>U+115D5</td>
+<td>U+115D6</td>
+<td>U+115D7</td>
+<td>U+115D8</td>
+<td>U+115D9</td>
+<td>U+115DA</td>
+<td>U+115DB</td>
+<td>U+115DC</td>
+<td>U+115DD</td>
+</tr>
+</tbody>
+</table>
+<br>
+</div>
+<div class="side">
+<textarea id="output" rows="3" placeholder="𑖀𑖡𑖲𑖤𑖡𑖿𑖠"></textarea>
+<p>
+<button onclick="insertAtCaret('output', ' ');return false;" style="color:blue">space<br>​</button> <button onclick="insertAtCaret('output', '\u202f');return false;" style="color:green">NNBSP<br>U+202F</button> <button onclick="document.getElementById('output').value = ''" style="color:red">clear<br>​</button></p>
+<hr>
+<p style="border: 1px solid" class="indvow">Independent vowels</p>
+<p style="border: 1px solid" class="con">Consonants</p>
+<p style="border: 1px solid" class="vowelsign">Dependent vowel signs</p>
+<p style="border: 1px solid" class="varsign">Various signs</p>
+<p style="border: 1px solid" class="headmark">Head mark</p>
+<p style="border: 1px solid" class="punct">Punctuation</p>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(".siddham>td").click(function(){
+    var range = document.createRange();
+    range.selectNodeContents(this);  
+    var sel = window.getSelection(); 
+    sel.removeAllRanges(); 
+    sel.addRange(range);
+    document.execCommand('copy');
+    insertAtCaret('output', sel);return false;
+});
+$(".unicode>td").click(function(){
+    var range = document.createRange();
+    range.selectNodeContents(this);  
+    var sel = window.getSelection(); 
+    sel.removeAllRanges(); 
+    sel.addRange(range);
+    document.execCommand('copy');
+    window.open("https://www.compart.com/en/unicode/" + sel, "_blank");
+});
+// ---------------------------
+function insertAtCaret(areaId, text) {
+  var txtarea = document.getElementById(areaId);
+  if (!txtarea) {
+    return;
+  }
+  var scrollPos = txtarea.scrollTop;
+  var strPos = 0;
+  var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
+    "ff" : (document.selection ? "ie" : false));
+  if (br == "ie") {
+    txtarea.focus();
+    var range = document.selection.createRange();
+    range.moveStart('character', -txtarea.value.length);
+    strPos = range.text.length;
+  } else if (br == "ff") {
+    strPos = txtarea.selectionStart;
+  }
+  var front = (txtarea.value).substring(0, strPos);
+  var back = (txtarea.value).substring(strPos, txtarea.value.length);
+  txtarea.value = front + text + back;
+  strPos = strPos + text.length;
+  txtarea.scrollTop = scrollPos;
+}
+</script>
+</html>
