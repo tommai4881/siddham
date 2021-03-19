@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devanagari to Siddham converter</title>
+<meta charset="utf-8">
+
+    <script type="text/javascript">
+	  
+var conversion = {
+"क": "𑖎",
+"च": "𑖓",
+"ट": "𑖘",
+"त": "𑖝",
+"प": "𑖢",
+"ख": "𑖟",
+"छ": "𑖔",
+"ठ": "𑖙",
+"थ": "𑖞",
+"फ": "𑖣",
+"ग": "𑖐",
+"ज": "𑖕",
+"ड": "𑖚",
+"द": "𑖟",
+"ब": "𑖤",
+"घ": "𑖑",
+"झ": "𑖖",
+"ढ": "𑖛",
+"ध": "𑖠",
+"भ": "𑖥",
+"ङ": "𑖒",
+"ञ": "𑖗",
+"ण": "𑖜",
+"न": "𑖡",
+"म": "𑖦",
+"ह": "𑖮",
+"य": "𑖧",
+"र": "𑖨",
+"ल": "𑖩",
+"व": "𑖪",
+"श": "𑖫",
+"ष": "𑖬",
+"स": "𑖭",
+"ं": "𑖽",
+"ः": "𑖾",
+"ँ": "𑖼",
+"्": "𑖿",
+"ा": "𑖯",
+"ि": "𑖰",
+"ी": "𑖱",
+"ु": "𑖲",
+"ू": "𑖳",
+"ृ": "𑖴",
+"ॄ": "𑖵",
+"े": "𑖸",
+"ै": "𑖹",
+"ो": "𑖺",
+"ौ": "𑖻",
+"अ": "𑖀",
+"आ": "𑖁",
+"इ": "𑖂",
+"ई": "𑖃",
+"उ": "𑖄",
+"ऊ": "𑖅",
+"ऋ": "𑖆",
+"ॠ": "𑖇",
+"ऌ": "𑖈",
+"ॡ": "𑖉",
+"ए": "𑖊",
+"ऐ": "𑖋",
+"ओ": "𑖌",
+"औ": "𑖍",
+"।": "𑗂",
+"॥": "𑗃",
+        };
+
+ var maxLength = Object.keys(conversion)
+    .reduce((a, b) => a.length > b.length ? a : b) // get the longest word
+    .length; // and it's length
+  
+  function convert (text) {
+    var converted = "";
+    var cur = 0;
+    while (cur < text.length) {
+      var testedPhoneme;
+      var symbol = undefined;
+      for (var length = maxLength; length > 0; length --) {
+        testedPhoneme = text.substr(cur, length);
+        if (conversion[testedPhoneme]) {
+          symbol = conversion[testedPhoneme];
+          break; // stop the loop
+        }
+      }
+      if (symbol) {
+        converted += symbol;
+        cur += testedPhoneme.length;
+      }
+      else {
+        converted += text[cur]
+        cur++;
+      }
+    }
+    return converted
+  }
+
+  function onInputTextChange(txt) {
+    var outputTextareaElem = document.getElementById("output_textarea");
+    var div = document.createElement("div");
+    var outputHtmlEntities = convert(txt);
+    div.innerHTML = outputHtmlEntities;
+    outputTextareaElem.value = div.innerText;
+  }
+
+
+        function select() {
+          const input = document.getElementById('input_textarea');
+          input.focus();
+          input.select();
+        }   
+        function copytext() {
+          var copyText = document.getElementById("output_textarea");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+        }
+
+    </script>
+    
+<style>
+@import url(https://victorlee.github.io/fonts/stylesheet.css);
+html {
+font-family:arial
+}
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+td, th {
+  border: 1px solid #AAA;
+  text-align: center;
+  padding: 1px;
+}
+textarea {
+	font-size: 16pt;
+	font-family: Eczar, Noto Sans Siddham;
+    width: 96%;
+    line-height:1.5;
+} 
+.note {
+  border: 1px solid #DDD;
+  width: 30%;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+
+
+</head>
+<body>  
+
+<body>  
+
+<center><h1 class="text-center">Devanagari to Siddham converter</h1>
+<br>
+ 
+<center>
+<table>
+<thead>
+<tr>
+<th>	
+<button onclick="select('input_textarea')">Select all</button>
+<button onclick="document.getElementById('input_textarea').value = ''">Clear</button>
+</th>
+<th>
+<button onclick="copytext()">Copy text</button>
+</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<textarea
+id="input_textarea"
+autofocus=""
+placeholder="Input text here"
+rows="10"
+oninput="onInputTextChange(this.value)"></textarea>    
+</td>
+<td>
+<textarea rows="10" placeholder="output" id="output_textarea"></textarea>    
+</td>
+
+</tr>
+</tbody>
+</table>
+</center>
+
+</body>
+</html>
