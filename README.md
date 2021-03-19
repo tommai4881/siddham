@@ -1,6 +1,6 @@
-# siddham-unicode
+[unicode summary](unicode.html)
 
-A summary of Siddham script unicodes
+[typer](typer.html)
 
 ## License
 
